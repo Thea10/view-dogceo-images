@@ -49,9 +49,6 @@
             {{ breed }}
           </button>
         </li>
-        <!-- <li class="pointer">black</li>
-        <li class="pointer">white</li>
-        <li class="pointer">white</li> -->
       </ul>
     </div>
   </div>

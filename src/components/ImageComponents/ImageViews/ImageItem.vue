@@ -1,10 +1,12 @@
 <template>
-  <img class="image-card" :alt="image" :src="image" />
+  <router-link title="View" class="image-card pointer"  :to="{name: 'ImageDetail', params:{source:image}}"> 
+    <img :alt="image" :src="image" />
+  </router-link>
 </template>
 <script>
 export default {
   name: "ImageItem",
-    props: ["image"],
+  props: ["image"],
 };
 </script>
 <style lang="scss">

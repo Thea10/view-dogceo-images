@@ -75,8 +75,9 @@
     &.show {
       top: 2%;
       opacity: 1;
-      height: auto;
+      height: 250px;
       transform: translateY(30px);
+      overflow-y: scroll;
     }
   }
 

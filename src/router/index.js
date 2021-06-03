@@ -14,7 +14,7 @@ const routes = [
     },
   },
   {
-    path: "/dog-detail/:id",
+    path: "/dog-detail/:source",
     name: "ImageDetail",
     component: () => import("@/views/ImageDetail.vue"),
     meta: {
