@@ -1,0 +1,86 @@
+@import "@/assets/scss/global-style-variables.scss";
+
+.search-input-holder {
+  width: 80%;
+  position: relative;
+  background: $shadow;
+  margin: 1rem auto;
+  border-radius: 8px;
+  padding: 0.2rem;
+  display: flex;
+  input {
+    width: 90%;
+    height: 30px;
+    border: 0;
+    outline: 0;
+    background: transparent;
+    color: $dark-color;
+  }
+
+  button {
+    border: 0;
+    outline: 0;
+    font-size: 14px;
+    padding: 5px;
+    transition: all 0.3s ease-in-out;
+    &:not(:disabled){
+      cursor: pointer;
+    }
+  }
+  .search-button {
+    background: $dark-color;
+    border-radius: 10px;
+    color: $drop-text;
+    margin-right: 10px;
+    &:hover {
+      background: $btn-hover;
+    }
+  }
+
+  .clear-button {
+    background: transparent;
+    color: $dark-color;
+    font-size: 12px;
+   }
+
+  .search-drop {
+    position: absolute;
+    background: inherit;
+    color: $dark-color;
+    margin-top: 5%;
+    height: 0;
+    opacity: 0;
+    overflow: hidden;
+    transition: all 0.6s ease-in-out;
+    z-index: 55;
+    width: 50%;
+    left: 20%;
+    padding: 16px;
+    border-radius: 0 0 8px 8px;
+    right: 30%;
+    font-size: 12px;
+    ul {
+      padding: 0;
+      list-style: none;
+      li {
+        margin: 1rem 0;
+        padding: 2px;
+        text-transform: capitalize;
+        transition: all 0.3s ease-in-out;
+        &:hover {
+          border-bottom: 1px solid $loaderMask1;
+        }
+      }
+    }
+    &.show {
+      top: 2%;
+      opacity: 1;
+      height: auto;
+      transform: translateY(30px);
+    }
+  }
+
+  @include md-min {
+    width: 45%;
+  }
+}

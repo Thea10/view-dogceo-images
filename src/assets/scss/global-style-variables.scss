@@ -1,3 +1,21 @@
 $background-darker: #090b0d;
 $dark-color: #FAFAFA;
 $drop-text: rgba(53, 47, 68, 0.6);
+$loader-bg:#050708 ;
+$loaderMask1: #13181b;
+$loaderMask2: #0b1015;
+$shadow: #111214;
+$btn-hover: #c7c7c7;
+$screen-md-min: 768px;
+
+
+.pointer{
+    cursor: pointer;
+}
+
+
+@mixin md-min {
+    @media(min-width: #{$screen-md-min}) {
+        @content;
+    }
+}

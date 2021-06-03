@@ -1,1 +1,51 @@
 //hover imcrease box shadow;
+@import "@/assets/scss/global-style-variables.scss";
+@import "@/assets/scss/keyframes.scss";
+
+.loader,
+.holder {
+  width: 90%;
+  position: relative;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  grid-auto-rows: 100px;
+  margin: auto;
+
+  .loading-images {
+    background: $loader-bg;
+    background: linear-gradient(
+      to bottom left,
+      $loaderMask1 0%,
+      $loaderMask2 50%,
+      $loaderMask1 100%
+    );
+    background-size: 500px;
+    transition: all 0.8s;
+    animation: shimmerLoading 1s linear infinite forwards;
+  }
+
+  .loading-images,
+  .image-card {
+    grid-row-end: span 3;
+    border-radius: 5px;
+    margin: auto;
+    height: 200px;
+    width: 200px;
+  }
+
+  .loading-text{
+      background: $loaderMask2;
+      border-radius: 8px;
+      padding: 8px;
+      position: fixed;
+  }
+
+  @include md-min {
+    width: 75%;
+
+    .loading-images,
+    .image-card {
+      grid-row-end: span 3;
+    }
+  }
+}
