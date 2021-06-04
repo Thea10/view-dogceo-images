@@ -5,7 +5,6 @@
       type="text"
       placeholder="Search for dogs (by breeds)"
       v-model="searchText"
-      :disabled="searchingPhotos"
       @click="showDrop()"
     />
     <button
@@ -15,7 +14,6 @@
         resetText();
         hideDrop();
       "
-      :disabled="searchingPhotos"
     >
       Clear
     </button>
@@ -23,7 +21,7 @@
     <button
       class="search-button"
       @click="searchImage()"
-      :disabled="!searchText || searchingPhotos"
+      :disabled="!searchText"
     >
       Go
     </button>
@@ -70,7 +68,6 @@ export default {
   },
   methods: {
     setText(text) {
-      console.log(text);
       this.searchText = text;
     },
     resetText() {

@@ -1,6 +1,6 @@
 <template>
-  <router-link title="View" class="image-card pointer"  :to="{name: 'ImageDetail', params:{source:image}}"> 
-    <img :alt="image" :src="image" />
+  <router-link  v-img-lazy-load title="View" class="image-card pointer"  :to="{name: 'ImageDetail', params:{source:image}}"> 
+    <img :alt="image" :data-url="image"  :data-errimage="'@/assets/logo.png'"  />
   </router-link>
 </template>
 <script>

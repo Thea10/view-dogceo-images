@@ -15,6 +15,7 @@ export default {
 body {
   margin: 0;
   background: $background-darker;
+  scroll-behavior: smooth;
 }
 #app {
   font-family: "Roboto", Avenir, Helvetica, Arial, sans-serif;

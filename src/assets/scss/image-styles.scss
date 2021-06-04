@@ -32,6 +32,12 @@
     height: 200px;
     width: 200px;
 
+    &.loaded {
+      img {
+        transform: translateY(30px);
+      }
+    }
+
     img {
       border-radius: 5px;
       width: inherit;
@@ -50,6 +56,13 @@
     border-radius: 8px;
     padding: 8px;
     position: fixed;
+  }
+
+  .end-text{
+    position: absolute;
+    bottom: 0;
+    font-size: 12px;
+    color: $btn-hover;
   }
 
   @include md-min {
@@ -85,7 +98,7 @@
       width: 400px;
     }
   }
-  span{
+  span {
     word-wrap: break-word;
   }
 }

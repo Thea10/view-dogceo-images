@@ -1,6 +1,11 @@
 <template>
   <div class="holder">
-    <ImageItem v-for="(image, index) of images" v-bind:key="index" :image="image" />
+    <ImageItem
+      v-for="(image, index) of images"
+      v-bind:key="index"
+      :image="image"
+    />
+    <span class="end-text">You've reached the end</span>
   </div>
 </template>
 <script>
